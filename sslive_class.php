@@ -2,7 +2,11 @@
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
+
+## Use this line if you put the HMAC.php file in the same directory
 require_once('HMAC.php');
+## Use the following line if you keep HMAC.php in the PEAR repository.
+//require_once('Crypt/HMAC.php');
 
 
 class SSLiveAPI {

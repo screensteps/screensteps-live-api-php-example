@@ -1,1 +1,3 @@
 PHP example files for interfacing with your ScreenSteps Live account using the ScreenSteps Live API.
+
+This example requires the Crypt_HMAC PEAR package available at http://pear.php.net/package/Crypt_HMAC.
