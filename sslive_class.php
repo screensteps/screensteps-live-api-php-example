@@ -105,9 +105,9 @@ class SSLiveAPI {
 
 	private function encode($data) {
 		$hasher =& new Crypt_HMAC($this->api_key, "sha1");
-    	$digest = $hasher->hash($data);
-    	// hash_mac isn't installed on two systems I tried so we use PEAR library
-    	// $digest = hash_mac("sha1", $data, $this->api_key, true);
+		$digest = $hasher->hash($data);
+		// hash_mac isn't installed on two systems I tried so we use PEAR library
+		// $digest = hash_mac("sha1", $data, $this->api_key, true);
 		return base64_encode(pack('H*', $digest));
 	}
 }
