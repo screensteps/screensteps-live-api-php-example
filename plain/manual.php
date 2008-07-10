@@ -1,6 +1,6 @@
 <?php
 	// Include ScreenSteps Live include which loads ScreenSteps Live object and initializes it
-	require_once('sslive_include.php');
+	require_once('../sslive_include.php');
 	
 	// Extract manual id from GET query
 	$manual_id = intval($_GET['manual_id']);

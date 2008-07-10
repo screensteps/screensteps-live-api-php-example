@@ -1,6 +1,6 @@
 <?php
 	// Include ScreenSteps Live include which loads ScreenSteps Live object and initializes it
-	require_once('sslive_include.php');
+	require_once('../sslive_include.php');
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
 	$xmlobject = $sslive->GetManuals();
