@@ -89,7 +89,7 @@ class SSLiveAPI {
 		## Build authentication header
 		$header[] = "Content-Type: application/xml";
 		$header[] = "Date: " . $httpDate;
-		$header[] = "ss-auth: " . $this->encode($this->domain . ':' . $path_query . ':' . $httpDate);
+		$header[] = "Authorization: " . $this->encode($this->domain . ':' . $path_query . ':' . $httpDate);
 		
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
 		
