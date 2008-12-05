@@ -3,17 +3,17 @@
 	require_once('../sslive_include.php');
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
-	$xmlobject = $sslive->GetManuals();
+	$xmlArray = $sslive->GetSpaces();
+
+	print ("<h2>Spaces</h2>\n");
 	
-	print ("<h2>Manuals</h2>\n");
-	
-	if ($xmlobject) {
-		if (count($xmlobject) == 0) {
-			print "<p>No manuals found.</p>";
+	if ($xmlArray) {
+		if (count($xmlArray) == 0) {
+			print "<p>No spaces found.</p>";
 		} else {
 			print ("<ul>\n");
-			foreach ($xmlobject as $manual) {
-				print ('<li><a href="manual.php?manual_id=' . $manual->id . '">' . $manual->title . "</a></li>\n");
+			foreach ($xmlArray['space'] as $space) {
+				print ('<li><a href="space.php?space_id=' . $space['id'] . '">' . $space['title'] . "</a></li>\n");
 			}
 			print ("</ul>\n");
 		}

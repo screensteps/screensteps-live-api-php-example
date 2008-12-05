@@ -2,29 +2,30 @@
 	// Include ScreenSteps Live include which loads ScreenSteps Live object and initializes it
 	require_once('../sslive_include.php');
 	
-	// Extract manual id from GET query
-	$manual_id = intval($_GET['manual_id']);
+	// Extract id from GET query
+	$space_id = $_GET['space_id'];
+	$manual_id = $_GET['manual_id'];
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
-	$xmlobject = $sslive->GetManual($manual_id);
+	$xmlArray = $sslive->GetManual($space_id, $manual_id);
 
-	print ('<p><a href="manuals.php">Return to manuals</a></p>' . "\n");
+	print ('<p><a href="space.php?space_id=' . $space_id . '">Return to Space "' . $xmlArray['space']['title'] . '"</a></p>' . "\n");
 	
-	if ($xmlobject) {
-		$manual_id = $xmlobject->id;
+	if (is_array($xmlArray)) {
+		$manual_id = $xmlArray['id'];
 		
-		print ('<h2>'. $xmlobject->title . '</h2>');
+		print ('<h2>'. $xmlArray['title'] . '</h2>');
 
-		if (count($xmlobject->sections->section) == 0) {
-			print "<p>Manual has no sections.</p>";
+		if (count($xmlArray['chapters']['chapter']) == 0) {
+			print "<p>Manual has no chapters.</p>";
 		} else {
-			foreach ($xmlobject->sections->section as $section) {
-				print ('<h3>' . $section->title . '</h3>');
+			foreach ($xmlArray['chapters']['chapter'] as $chapter) {
+				print ('<h3>' . $chapter['title'] . '</h3>');
 				
 				print ("<ul>\n");
-				foreach ($section->lessons->lesson as $lesson) {
-					print ('<li><a href="lesson.php?manual_id=' . $manual_id . '&lesson_id=' . $lesson->id . '">' . 
-						$lesson->title . "</a></li>\n");
+				foreach ($chapter['lessons']['lesson'] as $lesson) {
+					print ('<li><a href="lesson.php?space_id=' . $space_id . '&manual_id=' . $manual_id . '&lesson_id=' . $lesson['id'] . '">' . 
+						$lesson['title'] . "</a></li>\n");
 				}
 				print ("</ul>\n");
 			}

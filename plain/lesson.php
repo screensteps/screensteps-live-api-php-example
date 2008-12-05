@@ -2,29 +2,69 @@
 	// Include ScreenSteps Live include which loads ScreenSteps Live object and initializes it
 	require_once('../sslive_include.php');
 	
-	// Extract manual and lesson id from GET query
-	$manual_id = intval($_GET['manual_id']);
+	// Extract id from GET query
+	$space_id = $_GET['space_id'];
+	if (isset($_GET['manual_id'])) $manual_id = $_GET['manual_id'];
+	if (isset($_GET['bucket_id'])) $bucket_id = $_GET['bucket_id'];
 	$lesson_id = intval($_GET['lesson_id']);
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
-	$xmlobject = $sslive->GetLesson($manual_id, $lesson_id);
+	if (isset($manual_id))
+		$xmlArray = $sslive->GetManualLesson($space_id, $manual_id, $lesson_id);
+	else
+		$xmlArray = $sslive->GetBucketLesson($space_id, $bucket_id, $lesson_id);
 	
-	print ('<p><a href="manual.php?manual_id=' . $manual_id . '">Return to manual</a></p>' . "\n");
+	//print_r($xmlArray);
 	
-	if ($xmlobject) {
-		print ('<h2>' . $xmlobject->title . "</h2>\n");
-		print ('<p>' . $xmlobject->description . "</p>\n");
+	// Spaces link
+	print ('<p><a href="space.php?space_id=' . $space_id . '">Return to Space "' . $xmlArray['space']['title'] . '"</a></p>' . "\n");
+	
+	if (is_array($xmlArray)) 
+	{
+		if (isset($manual_id))
+		{
+			// Links for manual
+			print ('<p><a href="manual.php?space_id=' . $space_id . '&manual_id=' . $manual_id . '">Return to Manual "' . $xmlArray['manual']['title'] . '"</a></p>' . "\n");
+			
+			if (is_array($xmlArray['manual']['previous_lesson']))
+			{
+				print ('<p><a href="lesson.php?space_id=' . $space_id . '&manual_id=' . $manual_id . 
+						'&lesson_id=' . $xmlArray['manual']['previous_lesson']['id'] . '">Previous Lesson "' . 
+						$xmlArray['manual']['previous_lesson']['title'] . '"</a></p>' . "\n");
+			}
+						
+			if (is_array($xmlArray['manual']['next_lesson']))
+			{
+				print ('<p><a href="lesson.php?space_id=' . $space_id . '&manual_id=' . $manual_id . 
+						'&lesson_id=' . $xmlArray['manual']['next_lesson']['id'] . '">Next Lesson "' . 
+						$xmlArray['manual']['next_lesson']['title'] . '"</a></p>' . "\n");
+			}
+		}
+		else
+		{
+			// Links for bucket
+			print ('<p><a href="bucket.php?space_id=' . $space_id . '&bucket_id=' . $bucket_id . '">Return to Bucket "' . $xmlArray['bucket']['title'] . '"</a></p>' . "\n");
+		}
 		
-		if (count($xmlobject->steps->step) == 0)
+		// Lesson info
+		print ('<h2>' . $xmlArray['title'] . "</h2>\n");
+		print ('<p>' . $xmlArray['description'] . "</p>\n");
+		
+		// Steps
+		if (!isset($xmlArray['steps']['step']) || count($xmlArray['steps']['step']) == 0)
 		{
 			print ("<p>Lesson has no steps.</p>\n");
 		} else {
-			foreach ($xmlobject->steps->step as $step) {
-				print ('<h3>' . $step->title . "</h3>\n");
-				print ('<p>' . $step->instructions . "</p>\n");
-				print ('<p><img src="' . $step->media->url . 
-					'" width="' . $step->media->width . '" height="' . $step->media->height . '" />' . "\n");
-				print ('<p></p>' . "\n");
+			foreach ($xmlArray['steps']['step'] as $step) {
+				print ('<h3>' . $step['title'] . "</h3>\n");
+				print ('<p>' . $step['instructions'] . "</p>\n");
+				
+				// Step media
+				if (isset($step['media'])) {
+					print ('<p><img src="' . $step['media'][0]['url'] . 
+						'" width="' . $step['media'][0]['width'] . '" height="' . $step['media'][0]['height'] . '" />' . "\n");
+					print ('<p></p>' . "\n");
+				}
 			}
 		}
 	} else {
