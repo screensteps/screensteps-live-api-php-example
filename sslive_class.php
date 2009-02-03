@@ -1,6 +1,6 @@
 <?php
 
-// Version 0.8.0.1
+// Version 0.9.0.1
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
@@ -14,10 +14,9 @@ require_once(dirname(__FILE__) . '/HMAC.php');
 class SSLiveAPI {
 	// PUBLIC
 	var $domain = '';
-	var $api_key = '';
+	var $auth = array('type'=>'', 'username'=>'', 'password'=>'', 'token'=>'', 'expires'=>'');
 	var $last_error = '';
 	var $protocol = 'http';
-	var $show_protected = false;
 	var $use_simplexml = false;
 	
 	// PRIVATE
@@ -28,13 +27,12 @@ class SSLiveAPI {
 	var $xml_doc_type = '';
 	
 	// PHP 4
-	function SSLiveAPI($domain, $api_key, $protocol='http') {
-		$this->__construct($domain, $api_key, $protocol);
+	function SSLiveAPI($domain, $protocol='http') {
+		$this->__construct($domain, $protocol);
 	}
 	
-	function __construct($domain, $api_key, $protocol='http') {
+	function __construct($domain, $protocol='http') {
 		$this->domain = $domain;
-		$this->api_key = $api_key;
 		$this->protocol = $protocol;
 	}
 	
@@ -43,6 +41,23 @@ class SSLiveAPI {
 	}
 	
 	// PUBLIC
+	
+	
+	function SetAPIKey($api_key) {
+		$this->auth['password'] = $api_key;
+		$this->auth['username'] = '';
+		$this->auth['type'] = 'api key';
+		$this->auth['token'] = '';
+		//$this->auth['expires'] = '';
+	}
+	
+	function SetUserCredentials($username, $password) {
+		$this->auth['password'] = $password;
+		$this->auth['username'] = $username;
+		$this->auth['type'] = 'username/password';
+		$this->auth['token'] = '';
+		//$this->auth['expires'] = '';
+	}
 	
 	function GetSpaces() {
 		// Example URL: http://example.screensteps.com/spaces
@@ -142,42 +157,125 @@ class SSLiveAPI {
 	
 	function getCompleteURL($request) {
 		$url = $this->protocol . '://' . $this->domain . $request;
-		if ($this->show_protected) $url .= '?show_protected=true';
 		return $url;
 	}
 	
 	function requestURLData($url, &$data) {
-		$parsed_url = parse_url($url);
-		$path_query = $parsed_url['path'];
-		if ($this->show_protected) $path_query .= '?show_protected=true';
-		$httpDate = gmdate("D, d M Y H:i:s T");
-
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-				
-		## Build authentication header
-		$header[] = "Content-Type: application/xml";
-		$header[] = "Accept: application/xml";
-		$header[] = "Date: " . $httpDate;
-		$header[] = "Authorization: " . $this->encode($this->domain . ':' . $path_query . ':' . $httpDate);
+		$error = '';
+		$key = '';
+		$value = '';
+		$formData = '';
 		
-		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+		// If username/password then we need to login first
+		/*if ( $this->auth['type'] == 'username/password' && 
+				($this->auth['token'] == '' || ($this->auth['expires'] != '' && $this->auth['expires'] > mktime() )) )
+		{
+			// Login with account credentials
+			$formVars = array('username' => $this->auth['username'], 
+							'password' => $this->auth['password'] );
+							
+			foreach ($formVars as $key => $value)
+			{
+				$formData .= $key . '=' . urlencode($value) . '&';
+			}
+			
+			$curl = curl_init();
+			curl_setopt($curl, CURLOPT_URL, 'https://' . $this->domain . '/client_logins');
+			curl_setopt($curl, CURLOPT_POST, count($formVars));
+			curl_setopt($curl, CURLOPT_POSTFIELDS, $formData);
+			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);     // follow redirects
+			curl_setopt($curl, CURLOPT_AUTOREFERER, true); // 
+			curl_setopt($curl, CURLOPT_MAXREDIRS, 1);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+			
+			$data = curl_exec($curl);
+			$error = curl_error($curl);
+			$returned_header  = curl_getinfo( $curl );
+			curl_close($curl);
+						
+			// check for errors
+			if (strcmp($data, "<status>Unauthorized</status>") == 0)
+			{
+				$error = 'bad authentication';
+			}
+			else
+			{
+				// Extract token and token expiration
+				$numMatches = preg_match('/<token>(.+?)<\/token>/', $data, $matches);
+				if ($numMatches > 0)
+				{
+					$this->auth['token'] = $matches[1];
+					$numMatches = preg_match('/<expires_at>(.+?)<\/expires_at>/', $data, $matches);
+					if ($numMatches > 0)
+					{
+						$this->auth['expires'] = strtotime($matches[1]);
+					} else {
+						$error = 'token expiration not found';
+					}	
+				} else {
+					$error = 'token not found';
+				}
+			}
+		}*/
 		
-		$data = curl_exec($curl);
-		$error = curl_error($curl);
-		curl_close($curl);
-		
-		if (strcmp($data, "Couldn't authenticate you") == 0)
-			$error = 'bad authentication';
+		if ($error == '')
+		{
+			$parsed_url = parse_url($url);
+			$path_query = $parsed_url['path'];
+			$httpDate = gmdate("D, d M Y H:i:s T");
+	
+			// Configure CURL
+			$curl = curl_init();
+			curl_setopt($curl, CURLOPT_URL, $url);
+			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);     // follow redirects
+			curl_setopt($curl, CURLOPT_AUTOREFERER, true); // 
+			curl_setopt($curl, CURLOPT_MAXREDIRS, 1);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+					
+			## Build authentication header based on auth type
+			$header[] = "Content-Type: application/xml";
+			$header[] = "Accept: application/xml";
+			$header[] = "Date: " . $httpDate;
+			if ($this->auth['type'] == 'api key' ) {
+			//print $path_query;
+				$header[] = "Authorization: ScreenStepsLiveAPI auth=" . $this->encode($this->domain . ':' . $path_query . ':' . $httpDate);
+			} elseif (!empty($this->auth['username'])) {
+				$header[] = "Authorization: Basic " . base64_encode($this->auth['username'] . ':' . $this->auth['password']);
+				//$header[] = "Authorization: ScreenStepsLiveLogin auth=" . $this->auth['token'];
+			}
+							
+			// Set header and get data
+			curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+			$data = curl_exec($curl);
+			$error = curl_error($curl);
+			$returned_header  = curl_getinfo( $curl );
+			curl_close($curl);
+			
+			// Check for errors
+			if ($this->auth['type'] == 'api key')
+			{
+				if (strcmp($data, "<status>Unauthorized</status>") == 0) $error = 'bad authentication';
+			} else {
+				if ($returned_header['http_code'] != 200) $error = 'bad authentication';
+				//if (strcmp($data, "<status>Unauthorized</status>") == 0) $error = 'bad authentication';
+				//if (strcmp($data, "<status>Expired</status>") == 0) $error = 'token expired';
+				//if ($error != '')
+				//{
+				//	$this->auth['token'] = '';
+				//	$this->auth['expires'] = '';
+				//}
+			}
+		}
 			
 		return $error;
 	}
 
 	function encode($data) {
-		$hasher =& new Crypt_HMAC($this->api_key, "sha1");
+		$hasher =& new Crypt_HMAC($this->auth['password'], "sha1");
 		$digest = $hasher->hash($data);
 		// hash_mac isn't installed on two systems I tried so we use PEAR library
 		// $digest = hash_mac("sha1", $data, $this->api_key, true);
@@ -187,7 +285,7 @@ class SSLiveAPI {
 	
 	// No SimpleXML in PHP 4...
 	function XMLToArray($data, $type) {
-		// print_r ($data);
+		//print_r ($data);
 		
 		// Create an configure
 		$parser = xml_parser_create('UTF-8');
@@ -222,9 +320,6 @@ class SSLiveAPI {
 				case 'space':
 					$array = $this->xml_node_arrays[0]['space'];
 					break;
-				/*case 'manuals':
-					$array = $this->xml_node_arrays[0]['manuals'];
-					break;*/
 				case 'manual':
 					$array = $this->xml_node_arrays[0]['manual'];
 					break;
@@ -263,7 +358,8 @@ class SSLiveAPI {
 			$storeAsArrayIndex = TRUE;
 			
 			// Determine which nodes are stored as indexes and which are stored as simple keyed arrays.
-			// print '$parentTagName: ' . $parentTagName . "\n";
+			//print '$this->xml_doc_type: ' . $this->xml_doc_type . "\n";
+			//print '$parentTagName: ' . $parentTagName . "\n";
 			switch ($this->xml_doc_type) {
 				case 'spaces':
 					switch ($parentTagName) {
