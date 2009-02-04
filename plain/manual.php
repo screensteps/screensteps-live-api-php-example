@@ -3,8 +3,8 @@
 	require_once('../sslive_include.php');
 	
 	// Extract id from GET query
-	$space_id = $_GET['space_id'];
-	$manual_id = $_GET['manual_id'];
+	$space_id = $sslive->CleanseID($_GET['space_id']);
+	$manual_id = $sslive->CleanseID($_GET['manual_id']);
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
 	$xmlArray = $sslive->GetManual($space_id, $manual_id);

@@ -3,10 +3,10 @@
 	require_once('../sslive_include.php');
 	
 	// Extract id from GET query
-	$space_id = $_GET['space_id'];
-	if (isset($_GET['manual_id'])) $manual_id = $_GET['manual_id'];
-	if (isset($_GET['bucket_id'])) $bucket_id = $_GET['bucket_id'];
-	$lesson_id = intval($_GET['lesson_id']);
+	$space_id = $sslive->CleanseID($_GET['space_id']);
+	if (isset($_GET['manual_id'])) $manual_id = $sslive->CleanseID($_GET['manual_id']);
+	if (isset($_GET['bucket_id'])) $bucket_id = $sslive->CleanseID($_GET['bucket_id']);
+	$lesson_id = $sslive->CleanseID($_GET['lesson_id']);
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
 	if (isset($manual_id))

@@ -3,7 +3,7 @@
 	require_once('../sslive_include.php');
 	
 	// Extract Space id from GET query
-	$space_id = intval($_GET['space_id']);
+	$space_id = $sslive->CleanseID($_GET['space_id']);
 	
 	$xmlArray = $sslive->GetSpace($space_id);
 

@@ -3,8 +3,8 @@
 	require_once('../sslive_include.php');
 	
 	// Extract id from GET query
-	$space_id = intval($_GET['space_id']);
-	$bucket_id = intval($_GET['bucket_id']);
+	$space_id = $sslive->CleanseID($_GET['space_id']);
+	$bucket_id = $sslive->CleanseID($_GET['bucket_id']);
 	
 	// Retrieve SimpleXML object using ScreenSteps Live method.
 	$xmlArray = $sslive->GetBucket($space_id, $bucket_id);
