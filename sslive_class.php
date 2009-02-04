@@ -1,6 +1,6 @@
 <?php
 
-// Version 0.9.0.1
+// Version 0.9.0.4
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
@@ -48,7 +48,6 @@ class SSLiveAPI {
 		$this->auth['username'] = '';
 		$this->auth['type'] = 'api key';
 		$this->auth['token'] = '';
-		//$this->auth['expires'] = '';
 	}
 	
 	function SetUserCredentials($username, $password) {
@@ -56,7 +55,6 @@ class SSLiveAPI {
 		$this->auth['username'] = $username;
 		$this->auth['type'] = 'username/password';
 		$this->auth['token'] = '';
-		//$this->auth['expires'] = '';
 	}
 	
 	function GetSpaces() {
@@ -166,64 +164,16 @@ class SSLiveAPI {
 		$value = '';
 		$formData = '';
 		
-		// If username/password then we need to login first
-		/*if ( $this->auth['type'] == 'username/password' && 
-				($this->auth['token'] == '' || ($this->auth['expires'] != '' && $this->auth['expires'] > mktime() )) )
-		{
-			// Login with account credentials
-			$formVars = array('username' => $this->auth['username'], 
-							'password' => $this->auth['password'] );
-							
-			foreach ($formVars as $key => $value)
-			{
-				$formData .= $key . '=' . urlencode($value) . '&';
-			}
-			
-			$curl = curl_init();
-			curl_setopt($curl, CURLOPT_URL, 'https://' . $this->domain . '/client_logins');
-			curl_setopt($curl, CURLOPT_POST, count($formVars));
-			curl_setopt($curl, CURLOPT_POSTFIELDS, $formData);
-			curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);     // follow redirects
-			curl_setopt($curl, CURLOPT_AUTOREFERER, true); // 
-			curl_setopt($curl, CURLOPT_MAXREDIRS, 1);
-			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-			
-			$data = curl_exec($curl);
-			$error = curl_error($curl);
-			$returned_header  = curl_getinfo( $curl );
-			curl_close($curl);
-						
-			// check for errors
-			if (strcmp($data, "<status>Unauthorized</status>") == 0)
-			{
-				$error = 'bad authentication';
-			}
-			else
-			{
-				// Extract token and token expiration
-				$numMatches = preg_match('/<token>(.+?)<\/token>/', $data, $matches);
-				if ($numMatches > 0)
-				{
-					$this->auth['token'] = $matches[1];
-					$numMatches = preg_match('/<expires_at>(.+?)<\/expires_at>/', $data, $matches);
-					if ($numMatches > 0)
-					{
-						$this->auth['expires'] = strtotime($matches[1]);
-					} else {
-						$error = 'token expiration not found';
-					}	
-				} else {
-					$error = 'token not found';
-				}
-			}
-		}*/
-		
 		if ($error == '')
 		{
 			$parsed_url = parse_url($url);
 			$path_query = $parsed_url['path'];
+			if (!empty($parsed_url['query'])) {
+				$path_query .= '?' . $parsed_url['query'];
+				if (!empty($parsed_url['fragment'])) {
+					$path_query .= '#' . $parsed_url['fragment'];
+				}
+			}
 			$httpDate = gmdate("D, d M Y H:i:s T");
 	
 			// Configure CURL
@@ -241,12 +191,12 @@ class SSLiveAPI {
 			$header[] = "Accept: application/xml";
 			$header[] = "Date: " . $httpDate;
 			if ($this->auth['type'] == 'api key' ) {
-			//print $path_query;
 				$header[] = "Authorization: ScreenStepsLiveAPI auth=" . $this->encode($this->domain . ':' . $path_query . ':' . $httpDate);
 			} elseif (!empty($this->auth['username'])) {
 				$header[] = "Authorization: Basic " . base64_encode($this->auth['username'] . ':' . $this->auth['password']);
-				//$header[] = "Authorization: ScreenStepsLiveLogin auth=" . $this->auth['token'];
 			}
+			
+			//print_r($header);
 							
 			// Set header and get data
 			curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
@@ -255,19 +205,19 @@ class SSLiveAPI {
 			$returned_header  = curl_getinfo( $curl );
 			curl_close($curl);
 			
+			//print_r($returned_header);
+						
 			// Check for errors
 			if ($this->auth['type'] == 'api key')
-			{
-				if (strcmp($data, "<status>Unauthorized</status>") == 0) $error = 'bad authentication';
+			{	
+				if ($returned_header['http_code'] != 200)
+				{
+					if (strcmp($data, "<status>Unauthorized</status>") == 0) $error = 'invalid authentication';
+					elseif (strcmp($data, "<status>Expired</status>") == 0) $error = 'expired authentication';
+					else $error = 'unknown authentication error';
+				}
 			} else {
 				if ($returned_header['http_code'] != 200) $error = 'bad authentication';
-				//if (strcmp($data, "<status>Unauthorized</status>") == 0) $error = 'bad authentication';
-				//if (strcmp($data, "<status>Expired</status>") == 0) $error = 'token expired';
-				//if ($error != '')
-				//{
-				//	$this->auth['token'] = '';
-				//	$this->auth['expires'] = '';
-				//}
 			}
 		}
 			
