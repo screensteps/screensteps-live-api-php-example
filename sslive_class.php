@@ -205,6 +205,21 @@ class SSLiveAPI {
 		}
 	}
 	
+	function SearchSpace($space_id, $search_term) {
+		// Example URL: http://example.screensteps.com/spaces/id/searches?text= ...
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/'. $space_id . '/searches?text=' . urlencode($search_term)), $data);
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'search');
+		} else {
+			return NULL;
+		}
+	}
+	
 	// Returns array of error strings (0 indexed)
 	function SubmitLessonComment($space_id, $resource_type, $resource_id, $lesson_id, $name, $email, $comment, $subscribe) {
 		
@@ -407,6 +422,9 @@ class SSLiveAPI {
 				case 'url':
 					$array = $this->xml_node_arrays[0]['url'];
 					break;
+				case 'search':
+					$array = $this->xml_node_arrays[0];
+					break;
 			}
 		}
 		
@@ -451,6 +469,15 @@ class SSLiveAPI {
 					switch ($parentTagName) {
 						case 'space':
 						case 'assets':
+							$storeAsArrayIndex = FALSE;
+							break;
+					}
+					break;
+				
+				case 'search':
+					switch ($parentTagName) {
+						case 'lessons':
+						case 'tags':
 							$storeAsArrayIndex = FALSE;
 							break;
 					}

@@ -13,7 +13,9 @@
 		} else {
 			print ("<ul>\n");
 			foreach ($xmlArray['space'] as $space) {
-				print ('<li><a href="space.php?space_id=' . $space['id'] . '">' . $space['title'] . "</a></li>\n");
+				print ('<li><a href="space.php?space_id=' . $space['id'] . '">' . $space['title'] . 
+					'</a> (<a href="search_space.php?space_id=' . $space['id'] . '">search space</a>)' . 
+					"</li>\n");
 			}
 			print ("</ul>\n");
 		}
