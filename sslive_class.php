@@ -1,6 +1,6 @@
 <?php
 
-// Version 1.1
+// Version 1.2
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
@@ -105,6 +105,38 @@ class SSLiveAPI {
 		}
 	}
 	
+	function SearchSpace($space_id, $search_term) {
+		// Example URL: http://example.screensteps.com/spaces/id/searches?text=SEARCH_TERM
+		$data = '';
+				
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/'. $space_id . 
+									'/searches?text=' . urlencode($search_term)), $data);
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'lessons');
+		} else {
+			return NULL;
+		}
+	}
+	
+	function GetLessonsWithTagInSpace($space_id, $tag) {
+		// Example URL: http://example.screensteps.com/spaces/ID/tags?tag=TAG
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . '/tags?tag=' . urlencode($tag)), $data);
+		print $data;
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'lessons');
+		} else {
+			return NULL;
+		}
+	}
+	
 	function GetManual($space_id, $manual_id) {
 		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID
 		$data = '';
@@ -115,6 +147,23 @@ class SSLiveAPI {
 				return simplexml_load_string($data);
 			else
 				return $this->XMLToArray($data, 'manual');
+		} else {
+			return NULL;
+		}
+	}
+	
+	function SearchManual($space_id, $manual_id, $search_term) {
+		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID/searches?text=SEARCH_TERM
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
+								'/manuals/'. $manual_id . '/searches?text=' . urlencode($search_term)), $data);
+
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'lessons');
 		} else {
 			return NULL;
 		}
@@ -135,6 +184,38 @@ class SSLiveAPI {
 		}
 	}
 	
+	function SearchBucket($space_id, $bucket_id, $search_term) {
+		// Example URL: http://example.screensteps.com/spaces/ID/buckets/ID/searches?text=SEARCH_TERM
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
+								'/buckets/'. $bucket_id . '/searches?text=' . urlencode($search_term)), $data);
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'lessons');
+		} else {
+			return NULL;
+		}
+	}
+	
+	function GetLessonsWithTagInBucket($space_id, $bucket_id, $tag) {
+		// Example URL: http://example.screensteps.com/spaces/ID/buckets/ID/tags?tag=TAG
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
+								'/buckets/'. $bucket_id . '/tags?tag=' . urlencode($tag)), $data);
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'tag');
+		} else {
+			return NULL;
+		}
+	}
+	
 	function GetManualLesson($space_id, $manual_id, $lesson_id) {
 		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID/lessons/ID
 		$data = '';
@@ -146,6 +227,22 @@ class SSLiveAPI {
 				return simplexml_load_string($data);
 			else
 				return $this->XMLToArray($data, 'lesson');
+		} else {
+			return NULL;
+		}
+	}
+	
+	function GetLessonsWithTagInManual($space_id, $manual_id, $tag) {
+		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID/tags?tag=TAG
+		$data = '';
+		
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
+								'/manuals/'. $manual_id . '/tags?tag=' . urlencode($tag)), $data);
+		if ($this->last_error == '') {
+			if ($this->use_simplexml)
+				return simplexml_load_string($data);
+			else
+				return $this->XMLToArray($data, 'tag');
 		} else {
 			return NULL;
 		}
@@ -350,7 +447,7 @@ class SSLiveAPI {
 			$returned_header  = curl_getinfo( $curl );
 			curl_close($curl);
 			
-			//print_r($returned_header);
+			// print_r($returned_header);
 						
 			// Check for errors
 			if ($this->auth['type'] == 'api key')
@@ -362,7 +459,19 @@ class SSLiveAPI {
 					else $error = 'unknown authentication error';
 				}
 			} else {
-				if ($returned_header['http_code'] != 200) $error = 'bad authentication';
+				switch ($returned_header['http_code']) 
+				{
+					case 200:					
+						break;
+					case 500:
+						$error = 'internal server error';
+						break;
+					case 404:
+						$error = 'resource not found';
+						break;
+					default:
+						$error = 'bad authentication';
+				}
 			}
 		}
 			
@@ -410,22 +519,28 @@ class SSLiveAPI {
 		{
 			switch ($type) {
 				case 'spaces':
-					$array = $this->xml_node_arrays[0]['spaces'];
+					$array = is_array($this->xml_node_arrays[0]['spaces']) ? $this->xml_node_arrays[0]['spaces'] : Array();
 					break;
 				case 'space':
-					$array = $this->xml_node_arrays[0]['space'];
+					$array = is_array($this->xml_node_arrays[0]['space']) ? $this->xml_node_arrays[0]['space'] : Array();
 					break;
 				case 'manual':
-					$array = $this->xml_node_arrays[0]['manual'];
+					$array = is_array($this->xml_node_arrays[0]['manual']) ? $this->xml_node_arrays[0]['manual'] : Array();
 					break;
 				case 'bucket':
-					$array = $this->xml_node_arrays[0]['bucket'];
+					$array = is_array($this->xml_node_arrays[0]['bucket']) ? $this->xml_node_arrays[0]['bucket'] : Array();
 					break;
 				case 'lesson':
-					$array = $this->xml_node_arrays[0]['lesson'];
+					$array = is_array($this->xml_node_arrays[0]['lesson']) ? $this->xml_node_arrays[0]['lesson'] : Array();
+					break;
+				case 'lessons':
+					$array = is_array($this->xml_node_arrays[0]['lessons']) ? $this->xml_node_arrays[0]['lessons'] : Array();
 					break;
 				case 'url':
-					$array = $this->xml_node_arrays[0]['url'];
+					$array = is_array($this->xml_node_arrays[0]['url']) ? $this->xml_node_arrays[0]['url'] : Array();
+					break;
+				case 'tag':
+					$array = is_array($this->xml_node_arrays[0]['tag']) ? $this->xml_node_arrays[0]['tag'] : Array();
 					break;
 			}
 		}
@@ -475,14 +590,6 @@ class SSLiveAPI {
 							break;
 					}
 					break;
-					
-				/*case 'manuals':
-					switch ($parentTagName) {
-						case 'manuals':
-							$storeAsArrayIndex = FALSE;
-							break;
-					}
-					break;*/
 				
 				case 'manual':
 					switch ($parentTagName) {
@@ -499,6 +606,7 @@ class SSLiveAPI {
 				case 'bucket':
 					switch ($parentTagName) {
 						case 'bucket':
+						case 'space':
 						case 'lessons':
 						case 'tags':
 							$storeAsArrayIndex = FALSE;
@@ -517,6 +625,29 @@ class SSLiveAPI {
 						case 'comments':
 						case 'next_lesson':
 						case 'previous_lesson':
+						case 'tag':
+							$storeAsArrayIndex = FALSE;
+							break;
+					}
+					break;
+				
+				case 'tag':
+					switch ($parentTagName) {
+						case 'tag':
+						case 'manual':
+						case 'bucket':
+						case 'space':
+						case 'lessons':
+							$storeAsArrayIndex = FALSE;
+							break;
+					}
+					break;
+				
+				case 'lessons':
+					switch ($parentTagName) {
+						case 'lessons':
+						case 'asset':
+						case 'tag':
 							$storeAsArrayIndex = FALSE;
 							break;
 					}
