@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tag>
+  <name>email</name>
+  <count>1</count>
+  <bucket>
+    <title>Employee Stuff</title>
+    <id>employee_stuff</id>
+    <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+  </bucket>
+  <space>
+    <id>employees</id>
+    <title>Employee Stuff</title>
+    <url>http://bmls.screenstepslive.com/spaces/employees</url>
+  </space>
+  <lessons type="array">
+    <lesson>
+      <title>Adding Messages to Highrise via Email</title>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/5543-Adding-Messages-to-Highrise-via-Email</url>
+      <id>5543</id>
+      <description>&lt;p&gt;This is how to get your dropbox email address and start tracking messages in Highrise.&lt;/p&gt;</description>
+    </lesson>
+  </lessons>
+</tag>

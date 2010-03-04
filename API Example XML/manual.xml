@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <space>
+    <title>ScreenSteps</title>
+    <id>screensteps</id>
+    <url>http://help.screensteps.com</url>
+  </space>
+  <title>ScreenSteps 2.7</title>
+  <id>screensteps</id>
+  <message></message>
+  <chapters type="array">
+    <chapter>
+      <title>Getting Started</title>
+      <id>1091</id>
+      <position type="integer">0</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1091</url>
+      <lessons type="array">
+        <lesson>
+          <id>8188</id>
+          <title>What's New in Version 2.7?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8188-What-s-New-in-Version-2-7-</url>
+        </lesson>
+        <lesson>
+          <id>4209</id>
+          <title>Learn About The Blue Mango Learning Systems Customer Support Methodology</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/4209-Learn-About-The-Blue-Mango-Learning-Systems-Customer-Support-Methodology</url>
+        </lesson>
+        <lesson>
+          <id>2380</id>
+          <title>Creating a Lesson</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2380-Creating-a-Lesson</url>
+        </lesson>
+        <lesson>
+          <id>2381</id>
+          <title>Key ScreenSteps Concepts</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2381-Key-ScreenSteps-Concepts</url>
+        </lesson>
+        <lesson>
+          <id>2382</id>
+          <title>Display Overview</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2382-Display-Overview</url>
+        </lesson>
+        <lesson>
+          <id>4499</id>
+          <title>Registering ScreenSteps With a Serial Number</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/4499-Registering-ScreenSteps-With-a-Serial-Number</url>
+        </lesson>
+        <lesson>
+          <id>5473</id>
+          <title>Registering ScreenSteps With a ScreenSteps Live Account</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/5473-Registering-ScreenSteps-With-a-ScreenSteps-Live-Account</url>
+        </lesson>
+        <lesson>
+          <id>2383</id>
+          <title>Upgrading from ScreenSteps 1 to ScreenSteps 2 Pro or Standard</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2383-Upgrading-from-ScreenSteps-1-to-ScreenSteps-2-Pro-or-Standard</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Capturing Images</title>
+      <id>1092</id>
+      <position type="integer">1</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1092</url>
+      <lessons type="array">
+        <lesson>
+          <id>2384</id>
+          <title>Capturing Images Using the Global Key Command (Mac only)</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2384-Capturing-Images-Using-the-Global-Key-Command-Mac-only-</url>
+        </lesson>
+        <lesson>
+          <id>2385</id>
+          <title>Using the Capture Tool</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2385-Using-the-Capture-Tool</url>
+        </lesson>
+        <lesson>
+          <id>2386</id>
+          <title>Using the Capture Palette</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2386-Using-the-Capture-Palette</url>
+        </lesson>
+        <lesson>
+          <id>2387</id>
+          <title>Using the Clipboard Recorder</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2387-Using-the-Clipboard-Recorder</url>
+        </lesson>
+        <lesson>
+          <id>2388</id>
+          <title>Importing Images Into a Step</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2388-Importing-Images-Into-a-Step</url>
+        </lesson>
+        <lesson>
+          <id>8935</id>
+          <title>How to Capture a Menu</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8935-How-to-Capture-a-Menu</url>
+        </lesson>
+        <lesson>
+          <id>2389</id>
+          <title>Using SnagIt with ScreenSteps</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2389-Using-SnagIt-with-ScreenSteps</url>
+        </lesson>
+        <lesson>
+          <id>2390</id>
+          <title>Dragging and Dropping Images Onto Lessons</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2390-Dragging-and-Dropping-Images-Onto-Lessons</url>
+        </lesson>
+        <lesson>
+          <id>4933</id>
+          <title>Embedding Video in a Step</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/4933-Embedding-Video-in-a-Step</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Editing Steps</title>
+      <id>1093</id>
+      <position type="integer">2</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1093</url>
+      <lessons type="array">
+        <lesson>
+          <id>2391</id>
+          <title>Formatting Text</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2391-Formatting-Text</url>
+        </lesson>
+        <lesson>
+          <id>2392</id>
+          <title>Insert a Link to a Web Page Into Your Lesson</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2392-Insert-a-Link-to-a-Web-Page-Into-Your-Lesson</url>
+        </lesson>
+        <lesson>
+          <id>2394</id>
+          <title>Annotating Images</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2394-Annotating-Images</url>
+        </lesson>
+        <lesson>
+          <id>2395</id>
+          <title>Cropping Images</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2395-Cropping-Images</url>
+        </lesson>
+        <lesson>
+          <id>2396</id>
+          <title>Image Tools</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2396-Image-Tools</url>
+        </lesson>
+        <lesson>
+          <id>3687</id>
+          <title>How do I Change the Layering of Annotations?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3687-How-do-I-Change-the-Layering-of-Annotations-</url>
+        </lesson>
+        <lesson>
+          <id>3688</id>
+          <title>How do I Check Spelling?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3688-How-do-I-Check-Spelling-</url>
+        </lesson>
+        <lesson>
+          <id>3689</id>
+          <title>How do I Search for Text in a Lesson?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3689-How-do-I-Search-for-Text-in-a-Lesson-</url>
+        </lesson>
+        <lesson>
+          <id>3690</id>
+          <title>What is Lesson Status?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3690-What-is-Lesson-Status-</url>
+        </lesson>
+        <lesson>
+          <id>4484</id>
+          <title>Reordering Steps in a Lesson</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/4484-Reordering-Steps-in-a-Lesson</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Exporting and Templates</title>
+      <id>1094</id>
+      <position type="integer">3</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1094</url>
+      <lessons type="array">
+        <lesson>
+          <id>2397</id>
+          <title>Exporting Lessons</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2397-Exporting-Lessons</url>
+        </lesson>
+        <lesson>
+          <id>2398</id>
+          <title>Getting Started With a ScreenSteps Live Account</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2398-Getting-Started-With-a-ScreenSteps-Live-Account</url>
+        </lesson>
+        <lesson>
+          <id>2399</id>
+          <title>Configure ScreenSteps to Upload Lessons to Your Blog</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2399-Configure-ScreenSteps-to-Upload-Lessons-to-Your-Blog</url>
+        </lesson>
+        <lesson>
+          <id>2400</id>
+          <title>Uploading a Lesson to a Blog/Wiki</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2400-Uploading-a-Lesson-to-a-Blog-Wiki</url>
+        </lesson>
+        <lesson>
+          <id>8189</id>
+          <title>Updating a Lesson on a Blog/Wiki</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8189-Updating-a-Lesson-on-a-Blog-Wiki</url>
+        </lesson>
+        <lesson>
+          <id>2402</id>
+          <title>Selecting Word, PDF and HTML Templates for Lessons</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2402-Selecting-Word-PDF-and-HTML-Templates-for-Lessons</url>
+        </lesson>
+        <lesson>
+          <id>2403</id>
+          <title>Changing/Setting the Default Template</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2403-Changing-Setting-the-Default-Template</url>
+        </lesson>
+        <lesson>
+          <id>2404</id>
+          <title>Overriding the Default Template for a Lesson</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2404-Overriding-the-Default-Template-for-a-Lesson</url>
+        </lesson>
+        <lesson>
+          <id>7093</id>
+          <title>How Can I See Which Web Servers I've Uploaded a Lesson To?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/7093-How-Can-I-See-Which-Web-Servers-I-ve-Uploaded-a-Lesson-To-</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Exporting to the System Clipboard</title>
+      <id>2719</id>
+      <position type="integer">4</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/2719</url>
+      <lessons type="array">
+        <lesson>
+          <id>8176</id>
+          <title>Exporting a Lesson to the Clipboard as HTML</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8176-Exporting-a-Lesson-to-the-Clipboard-as-HTML</url>
+        </lesson>
+        <lesson>
+          <id>8190</id>
+          <title>Exporting a Lesson to the Clipboard as PDF</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8190-Exporting-a-Lesson-to-the-Clipboard-as-PDF</url>
+        </lesson>
+        <lesson>
+          <id>8177</id>
+          <title>How do I Specify Which Template Is Used When Exporting To Clipboard?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8177-How-do-I-Specify-Which-Template-Is-Used-When-Exporting-To-Clipboard-</url>
+        </lesson>
+        <lesson>
+          <id>8178</id>
+          <title>How do I Paste the Path to the PDF File into a File Selection Dialog on OS X?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8178-How-do-I-Paste-the-Path-to-the-PDF-File-into-a-File-Selection-Dialog-on-OS-X-</url>
+        </lesson>
+        <lesson>
+          <id>8204</id>
+          <title>How do I Paste the Path to the PDF File into a File Selection Dialog on Windows?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8204-How-do-I-Paste-the-Path-to-the-PDF-File-into-a-File-Selection-Dialog-on-Windows-</url>
+        </lesson>
+        <lesson>
+          <id>8179</id>
+          <title>Why Don't Images Show Up In Emails I Send That I Pasted a Lesson Into?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8179-Why-Don-t-Images-Show-Up-In-Emails-I-Send-That-I-Pasted-a-Lesson-Into-</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Searching/Filtering Lessons</title>
+      <id>1095</id>
+      <position type="integer">5</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1095</url>
+      <lessons type="array">
+        <lesson>
+          <id>2405</id>
+          <title>Searching in Tag Mode</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2405-Searching-in-Tag-Mode</url>
+        </lesson>
+        <lesson>
+          <id>8191</id>
+          <title>Searching a Manual</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8191-Searching-a-Manual</url>
+        </lesson>
+        <lesson>
+          <id>8192</id>
+          <title>Searching for Lessons with Specific Tags</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8192-Searching-for-Lessons-with-Specific-Tags</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Tags</title>
+      <id>1096</id>
+      <position type="integer">6</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1096</url>
+      <lessons type="array">
+        <lesson>
+          <id>2406</id>
+          <title>Adding Tags</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2406-Adding-Tags</url>
+        </lesson>
+        <lesson>
+          <id>2407</id>
+          <title>Dragging Lessons Onto Tags</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2407-Dragging-Lessons-Onto-Tags</url>
+        </lesson>
+        <lesson>
+          <id>8193</id>
+          <title>Tagging Using the Tag Palette</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8193-Tagging-Using-the-Tag-Palette</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Manuals</title>
+      <id>1097</id>
+      <position type="integer">7</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1097</url>
+      <lessons type="array">
+        <lesson>
+          <id>2408</id>
+          <title>How to Create a Manual and Stub Out Lessons</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2408-How-to-Create-a-Manual-and-Stub-Out-Lessons</url>
+        </lesson>
+        <lesson>
+          <id>2409</id>
+          <title>Adding Existing Lessons To Manuals Using the Lesson Palette</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2409-Adding-Existing-Lessons-To-Manuals-Using-the-Lesson-Palette</url>
+        </lesson>
+        <lesson>
+          <id>3691</id>
+          <title>What are Draft Chapters?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3691-What-are-Draft-Chapters-</url>
+        </lesson>
+        <lesson>
+          <id>2410</id>
+          <title>Exporting a Manual to PDF or HTML (Pro only)</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2410-Exporting-a-Manual-to-PDF-or-HTML-Pro-only-</url>
+        </lesson>
+        <lesson>
+          <id>2411</id>
+          <title>Choosing a Template for a Manual (Pro only)</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2411-Choosing-a-Template-for-a-Manual-Pro-only-</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>The Library Folder</title>
+      <id>1098</id>
+      <position type="integer">8</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1098</url>
+      <lessons type="array">
+        <lesson>
+          <id>2412</id>
+          <title>Introduction To The ScreenSteps Library</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2412-Introduction-To-The-ScreenSteps-Library</url>
+        </lesson>
+        <lesson>
+          <id>2413</id>
+          <title>Creating New Libraries</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2413-Creating-New-Libraries</url>
+        </lesson>
+        <lesson>
+          <id>2414</id>
+          <title>Opening Libraries</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2414-Opening-Libraries</url>
+        </lesson>
+        <lesson>
+          <id>3785</id>
+          <title>Renaming a Library</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3785-Renaming-a-Library</url>
+        </lesson>
+        <lesson>
+          <id>10238</id>
+          <title>Importing a Library</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/10238-Importing-a-Library</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Customizing Output</title>
+      <id>1099</id>
+      <position type="integer">9</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1099</url>
+      <lessons type="array">
+        <lesson>
+          <id>2415</id>
+          <title>Configuring HTML and Blog Templates</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2415-Configuring-HTML-and-Blog-Templates</url>
+        </lesson>
+        <lesson>
+          <id>2417</id>
+          <title>Customizing PDF Output</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2417-Customizing-PDF-Output</url>
+        </lesson>
+        <lesson>
+          <id>2418</id>
+          <title>The ScreenSteps Templates Folder</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2418-The-ScreenSteps-Templates-Folder</url>
+        </lesson>
+        <lesson>
+          <id>2419</id>
+          <title>Customizing HTML Templates</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2419-Customizing-HTML-Templates</url>
+        </lesson>
+        <lesson>
+          <id>2420</id>
+          <title>Updating Your Templates</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2420-Updating-Your-Templates</url>
+        </lesson>
+      </lessons>
+    </chapter>
+    <chapter>
+      <title>Additional Topics</title>
+      <id>1100</id>
+      <position type="integer">10</position>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1100</url>
+      <lessons type="array">
+        <lesson>
+          <id>2421</id>
+          <title>Editing Images in an External Editor</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2421-Editing-Images-in-an-External-Editor</url>
+        </lesson>
+        <lesson>
+          <id>6851</id>
+          <title>Importing a Plain Text File Into a Lesson</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/6851-Importing-a-Plain-Text-File-Into-a-Lesson</url>
+        </lesson>
+        <lesson>
+          <id>2422</id>
+          <title>Syncing Image Filenames to Step Titles</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2422-Syncing-Image-Filenames-to-Step-Titles</url>
+        </lesson>
+        <lesson>
+          <id>2423</id>
+          <title>Using Split Step</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2423-Using-Split-Step</url>
+        </lesson>
+        <lesson>
+          <id>3686</id>
+          <title>How to Split a Lesson in Two (Create Two Smaller Lessons Out of One Large Lesson)</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3686-How-to-Split-a-Lesson-in-Two-Create-Two-Smaller-Lessons-Out-of-One-Large-Lesson-</url>
+        </lesson>
+        <lesson>
+          <id>2424</id>
+          <title>Duplicating Lessons and Manuals</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2424-Duplicating-Lessons-and-Manuals</url>
+        </lesson>
+        <lesson>
+          <id>2425</id>
+          <title>Uploading HTML Lessons to Your Mobile Me or .Mac Site</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2425-Uploading-HTML-Lessons-to-Your-Mobile-Me-or-Mac-Site</url>
+        </lesson>
+        <lesson>
+          <id>2426</id>
+          <title>Sharing ScreenSteps Lessons with Other Users of ScreenSteps</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2426-Sharing-ScreenSteps-Lessons-with-Other-Users-of-ScreenSteps</url>
+        </lesson>
+        <lesson>
+          <id>3692</id>
+          <title>How do I Resize an Image Without Resizing Annotations?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3692-How-do-I-Resize-an-Image-Without-Resizing-Annotations-</url>
+        </lesson>
+        <lesson>
+          <id>3693</id>
+          <title>How do I Copy Steps Between Lessons?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/3693-How-do-I-Copy-Steps-Between-Lessons-</url>
+        </lesson>
+        <lesson>
+          <id>8887</id>
+          <title>Where Is The ScreenSteps Preference File Stored?</title>
+          <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8887-Where-Is-The-ScreenSteps-Preference-File-Stored-</url>
+        </lesson>
+      </lessons>
+    </chapter>
+  </chapters>
+  <tags type="array">
+    <tag>
+      <name>.Mac</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=.Mac</url>
+    </tag>
+    <tag>
+      <name>2.1</name>
+      <count type="integer">19</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=2.1</url>
+    </tag>
+    <tag>
+      <name>2.5</name>
+      <count type="integer">7</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=2.5</url>
+    </tag>
+    <tag>
+      <name>Annotations</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Annotations</url>
+    </tag>
+    <tag>
+      <name>blog</name>
+      <count type="integer">2</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=blog</url>
+    </tag>
+    <tag>
+      <name>Blue Mango</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Blue+Mango</url>
+    </tag>
+    <tag>
+      <name>Chapters</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Chapters</url>
+    </tag>
+    <tag>
+      <name>Creating a Lesson</name>
+      <count type="integer">4</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Creating+a+Lesson</url>
+    </tag>
+    <tag>
+      <name>Crop</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Crop</url>
+    </tag>
+    <tag>
+      <name>Getting Started</name>
+      <count type="integer">5</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Getting+Started</url>
+    </tag>
+    <tag>
+      <name>HTML Templates</name>
+      <count type="integer">2</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=HTML+Templates</url>
+    </tag>
+    <tag>
+      <name>Image Capture</name>
+      <count type="integer">7</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Image+Capture</url>
+    </tag>
+    <tag>
+      <name>Mobile Me</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Mobile+Me</url>
+    </tag>
+    <tag>
+      <name>PDF Templates</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=PDF+Templates</url>
+    </tag>
+    <tag>
+      <name>Registration</name>
+      <count type="integer">3</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Registration</url>
+    </tag>
+    <tag>
+      <name>ScreenSteps</name>
+      <count type="integer">3</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=ScreenSteps</url>
+    </tag>
+    <tag>
+      <name>ScreenSteps 2</name>
+      <count type="integer">42</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=ScreenSteps+2</url>
+    </tag>
+    <tag>
+      <name>ScreenSteps Live</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=ScreenSteps+Live</url>
+    </tag>
+    <tag>
+      <name>sharing</name>
+      <count type="integer">2</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=sharing</url>
+    </tag>
+    <tag>
+      <name>SnagIt</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=SnagIt</url>
+    </tag>
+    <tag>
+      <name>Spell Check</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Spell+Check</url>
+    </tag>
+    <tag>
+      <name>Video</name>
+      <count type="integer">1</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Video</url>
+    </tag>
+    <tag>
+      <name>Welcome Center (More)</name>
+      <count type="integer">3</count>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/tags?tag=Welcome+Center+%28More%29</url>
+    </tag>
+  </tags>
+</manual>

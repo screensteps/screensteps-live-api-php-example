@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tag>
+  <name>2.5</name>
+  <count>0</count>
+  <manual>
+    <title>ScreenSteps 2.7</title>
+    <id>screensteps</id>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+  </manual>
+  <space>
+    <id>screensteps</id>
+    <title>ScreenSteps</title>
+    <url>http://help.screensteps.com</url>
+  </space>
+  <lessons type="array">
+    <lesson>
+      <title>Creating a Lesson</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2380-Creating-a-Lesson</url>
+      <id>2380</id>
+      <description>&lt;p&gt;Learn how to create a lesson using ScreenSteps 2.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Key ScreenSteps Concepts</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2381-Key-ScreenSteps-Concepts</url>
+      <id>2381</id>
+      <description>&lt;p&gt;This lesson will introduce some key ScreenSteps concepts to you.  Understanding these terms will help you get the most out of ScreenSteps.  ScreenSteps is a somewhat &amp;quot;opinionated&amp;quot; application.  It really is designed for doing a very different type of documentation than what you may be used to.  While you can use ScreenSteps any way that you would like, following the tips in this lesson will make your lessons more readable and easier to update in the future.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Display Overview</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2382-Display-Overview</url>
+      <id>2382</id>
+      <description>&lt;p&gt;This lesson gives a brief overview of the ScreenSteps 2 display.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Exporting Lessons</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2397-Exporting-Lessons</url>
+      <id>2397</id>
+      <description>&lt;p&gt;Learn how to export lessons from ScreenSteps in PDF or HTML format.  You can also upload lessons to a blog/wiki or ScreenSteps Live.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Syncing Image Filenames to Step Titles</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2422-Syncing-Image-Filenames-to-Step-Titles</url>
+      <id>2422</id>
+      <description>&lt;p&gt;This lesson will show you how to synch image filenames to step titles.  This can be handy if you are going to use images acquired with ScreenSteps in another application such as PowerPoint or Keynote.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Duplicating Lessons and Manuals</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2424-Duplicating-Lessons-and-Manuals</url>
+      <id>2424</id>
+      <description>&lt;p&gt;This lesson will teach you how to duplicate Lessons and Manuals.&lt;/p&gt;</description>
+    </lesson>
+    <lesson>
+      <title>Sharing ScreenSteps Lessons with Other Users of ScreenSteps</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2426-Sharing-ScreenSteps-Lessons-with-Other-Users-of-ScreenSteps</url>
+      <id>2426</id>
+      <description>&lt;p&gt;This lesson will show you how to export a ScreenSteps lesson as a package.  The package can then be imported into another ScreenSteps library for further editing.  This is a how you can send lessons between yourself and another user of ScreenSteps.&lt;/p&gt;</description>
+    </lesson>
+  </lessons>
+</tag>

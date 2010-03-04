@@ -19,6 +19,8 @@
 		$manualTitle = $xmlArray['title'];
 	}
 	
+	//pr($xmlArray);
+	
 	print ('<p><a href="space.php?space_id=' . $space_id . '">Return to Space "' . $spaceTitle . '"</a></p>' . "\n");
 
 	print ('<p>Search manual: <form method="get" action="manual.php?">');
@@ -70,6 +72,15 @@
 					}
 					print ("</ul>\n");
 				}
+			}
+			
+			if ( is_array($xmlArray['tags']['tag']) ) {
+				print '<h3>Tags in Manual:</h3>';
+				print '<ul>';
+				foreach ($xmlArray['tags']['tag'] as $value) {
+					print '<li>' . $value['name'] . '</li>';
+				}
+				print '</ul>';
 			}
 		}
 	} else {

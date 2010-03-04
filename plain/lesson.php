@@ -14,7 +14,7 @@
 	else
 		$xmlArray = $sslive->GetBucketLesson($space_id, $bucket_id, $lesson_id);
 	
-	//print_r($xmlArray);
+	//pr($xmlArray);
 	
 	// Spaces link
 	print ('<p><a href="space.php?space_id=' . $space_id . '">Return to Space "' . $xmlArray['space']['title'] . '"</a></p>' . "\n");
@@ -25,6 +25,8 @@
 		{
 			// Links for manual
 			print ('<p><a href="manual.php?space_id=' . $space_id . '&manual_id=' . $manual_id . '">Return to Manual "' . $xmlArray['manual']['title'] . '"</a></p>' . "\n");
+			
+			if (!empty($pdfLink)) print '<p><a href="'. $pdfLink . '">Download PDF</a></p>';
 			
 			if (is_array($xmlArray['manual']['previous_lesson']))
 			{
@@ -48,6 +50,14 @@
 		
 		// Lesson info
 		print ('<h2>' . $xmlArray['title'] . "</h2>\n");
+		if ( is_array($xmlArray['tags']['tag']) ) {
+			print '<h3>Tags:</h3>';
+			print '<ul>';
+			foreach ($xmlArray['tags']['tag'] as $value) {
+				print '<li>' . $value['name'] . '</li>';
+			}
+			print '</ul>';
+		}
 		print ('<p>' . $xmlArray['description'] . "</p>\n");
 		
 		// Steps

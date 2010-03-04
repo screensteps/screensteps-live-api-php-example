@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lessons type="array">
+  <lesson>
+    <title>Using the Capture Tool</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2385-Using-the-Capture-Tool</url>
+    <description>&lt;p&gt;Shows you how to use the capture tool.&lt;/p&gt;</description>
+    <id>2385</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Using the Capture Palette</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2386-Using-the-Capture-Palette</url>
+    <description>&lt;p&gt;Learn how to use the Capture Palette in ScreenSteps to quickly get screen shots.  The Capture Palette can float on top of other applications while you work.  Just click the capture icon to capture an image and add it to a ScreenSteps lesson.&lt;/p&gt;</description>
+    <id>2386</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>Creating a Lesson</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>How to Capture a Menu</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/8935-How-to-Capture-a-Menu</url>
+    <description>&lt;p&gt;There are a variety of ways you can capture menu items. This is one solution that will work on Mac or Windows.&lt;/p&gt;</description>
+    <id>8935</id>
+    <tags type="array">
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Capturing Images Using the Global Key Command (Mac only)</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2384-Capturing-Images-Using-the-Global-Key-Command-Mac-only-</url>
+    <description>&lt;p&gt;As of version 2.0.3 you can now assign a global key command to capture images into ScreenSteps.  This means that you no longer have to use the Clipboard Recorder unless you have a specific screen capture utility you want to interface with.  Currently this feature is only available for Mac OS X.&lt;/p&gt;</description>
+    <id>2384</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Using SnagIt with ScreenSteps</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2389-Using-SnagIt-with-ScreenSteps</url>
+    <description>&lt;p&gt;Learn how to set SnagIt to output to the system clipboard.  You can then turn on the Clipboard Recorder in ScreenSteps and use SnagIt to capture images for your ScreenSteps lessons.&lt;/p&gt;</description>
+    <id>2389</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>SnagIt</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Creating a Lesson</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2380-Creating-a-Lesson</url>
+    <description>&lt;p&gt;Learn how to create a lesson using ScreenSteps 2.&lt;/p&gt;</description>
+    <id>2380</id>
+    <tags type="array">
+      <tag>
+        <name>Getting Started</name>
+      </tag>
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>2.5</name>
+      </tag>
+      <tag>
+        <name>Creating a Lesson</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Using the Clipboard Recorder</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2387-Using-the-Clipboard-Recorder</url>
+    <description>&lt;p&gt;Learn how to use the Clipboard Recorder.  The Clipboard Recorder will add any image that is copied to the system clipboard as a ScreenSteps step.&lt;/p&gt;</description>
+    <id>2387</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Importing Images Into a Step</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2388-Importing-Images-Into-a-Step</url>
+    <description>&lt;p&gt;This lesson will show you how to import images that you already have saved on your hard drive into a step.  We know that this workflow isn't optimal right now and will be improving this in a future release of ScreenSteps.&lt;/p&gt;</description>
+    <id>2388</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Dragging and Dropping Images Onto Lessons</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2390-Dragging-and-Dropping-Images-Onto-Lessons</url>
+    <description>&lt;p&gt;This lesson will show you how to drag single or multiple images onto a lesson.  This can be a quick way to create steps if you already have existing images you would like to use.&lt;/p&gt;</description>
+    <id>2390</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+      <tag>
+        <name>Image Capture</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Image Tools</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2396-Image-Tools</url>
+    <description>&lt;p&gt;Learn what those icons are next to images in ScreenSteps.&lt;/p&gt;</description>
+    <id>2396</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Using Split Step</title>
+    <manual>
+      <id>screensteps</id>
+      <title>ScreenSteps 2.7</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    </manual>
+    <space>
+      <id>screensteps</id>
+      <title>ScreenSteps</title>
+      <url>http://help.screensteps.com</url>
+    </space>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2423-Using-Split-Step</url>
+    <description>&lt;p&gt;See how you can take traditional, text based documentation and turn it into something visual in just a couple of minutes.  &lt;/p&gt;</description>
+    <id>2423</id>
+    <tags type="array">
+      <tag>
+        <name>ScreenSteps 2</name>
+      </tag>
+    </tags>
+  </lesson>
+</lessons>

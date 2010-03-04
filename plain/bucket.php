@@ -13,11 +13,13 @@
 		$xmlArray = $sslive->SearchBucket($space_id, $bucket_id, $_GET['search_term']);
 		$spaceTitle = $_GET['space_title'];
 		$bucketTitle = $_GET['bucket_title'];
-	} else {
+	} else {		
 		$xmlArray = $sslive->GetBucket($space_id, $bucket_id);
 		$spaceTitle = $xmlArray['space']['title'];
 		$bucketTitle = $xmlArray['title'];
 	}
+	
+	//pr($xmlArray);
 
 	print ('<p><a href="space.php?space_id=' . $space_id . '">Return to Space "' . $spaceTitle . '"</a></p>' . "\n");
 	
@@ -66,6 +68,15 @@
 						$lesson['title'] . "</a></li>\n");
 				}
 				print ("</ul>\n");
+			}
+			
+			if ( is_array($xmlArray['tags']['tag']) ) {
+				print '<h3>Tags in Bucket:</h3>';
+				print '<ul>';
+				foreach ($xmlArray['tags']['tag'] as $value) {
+					print '<li>' . $value['name'] . '</li>';
+				}
+				print '</ul>';
 			}
 		}
 	} else {

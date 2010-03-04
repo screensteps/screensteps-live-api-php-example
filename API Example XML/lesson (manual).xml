@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson>
+  <space>
+    <title>ScreenSteps</title>
+    <id>screensteps</id>
+    <url>http://help.screensteps.com</url>
+  </space>
+  <chapter>
+    <id>1091</id>
+    <title>Getting Started</title>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/chapters/1091</url>
+  </chapter>
+  <manual>
+    <id>screensteps</id>
+    <title>ScreenSteps 2.7</title>
+    <private>true</private>
+    <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps</url>
+    <next_lesson>
+      <title>Key ScreenSteps Concepts</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2381-Key-ScreenSteps-Concepts</url>
+      <id>2381</id>
+    </next_lesson>
+    <previous_lesson>
+      <title>Learn About The Blue Mango Learning Systems Customer Support Methodology</title>
+      <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/4209-Learn-About-The-Blue-Mango-Learning-Systems-Customer-Support-Methodology</url>
+      <id>4209</id>
+    </previous_lesson>
+  </manual>
+  <id>2380</id>
+  <title>Creating a Lesson</title>
+  <url>http://help.screensteps.com/spaces/screensteps/manuals/screensteps/lessons/2380-Creating-a-Lesson</url>
+  <description>&lt;p&gt;Learn how to create a lesson using ScreenSteps 2.&lt;/p&gt;</description>
+  <allow_comments>true</allow_comments>
+  <steps type="array">
+<step>
+  <title>Select New Lesson</title>
+  <instructions>&lt;p&gt;To create a new Lesson, click on the &lt;strong&gt;New Lesson&lt;/strong&gt; button.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101568</id>
+    <full_size_id></full_size_id>
+    <filename>Select_New_Lesson.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Select_New_Lesson.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=2QXqyyfqxnmJI8TlERjfJBnm4YU%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>370</width>
+    <height>133</height>
+  </media>
+</step>
+<step>
+  <title>Edit Lesson Title</title>
+  <instructions>&lt;p&gt;A new lesson will be created and opened for editing.  Click on the lesson title to edit it.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101569</id>
+    <full_size_id></full_size_id>
+    <filename>Edit_Lesson_Title.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Edit_Lesson_Title.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=TTP8VMEY41NJK84H6F3eomhsYaA%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>376</width>
+    <height>213</height>
+  </media>
+</step>
+<step>
+  <title></title>
+  <instructions>
+</instructions>
+  <media>
+    <type>Image</type>
+    <id>101570</id>
+    <full_size_id></full_size_id>
+    <filename>media_1238806361150.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/media_1238806361150.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=aCSKf4qeY8J17qm1zojcluPcHfI%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>311</width>
+    <height>223</height>
+  </media>
+</step>
+<step>
+  <title>Capture Images/Create Steps</title>
+  <instructions>&lt;p&gt;There are several ways to create new steps:&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1) Click New Step - this creates a blank step.&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2) Click Capture (you can also open the Capture Palette by clicking on the arrow next to the camera).&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3) Turn on the Clipboard Recorder (with the Clipboard Recorder on, any image you place on the system clipboard will be added to your ScreenSteps lesson).&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101571</id>
+    <full_size_id></full_size_id>
+    <filename>Capture_ImagesCreate_Steps.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Capture_ImagesCreate_Steps.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=CmJMF5w7wy8gv2gkK5EQpe87p34%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>255</width>
+    <height>111</height>
+  </media>
+</step>
+<step>
+  <title>Add Some Text</title>
+  <instructions>&lt;p&gt;Here you can see that I have captured an image.  A step has been created.  You can add a step title (1) and/or step instructions (2).  Just click on the fields to edit them.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101572</id>
+    <full_size_id></full_size_id>
+    <filename>Add_Some_Text.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Add_Some_Text.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=AoMXlGzWmujLpPbtOQrshHRZSpA%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>560</width>
+    <height>372</height>
+  </media>
+</step>
+<step>
+  <title>Annotate Images</title>
+  <instructions>&lt;p&gt;Select an image by clicking on it.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101573</id>
+    <full_size_id></full_size_id>
+    <filename>Annotate_Images.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Annotate_Images.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=Vqu%2FnE1lVbs11q6L7y8sn3kYW28%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>402</width>
+    <height>456</height>
+  </media>
+</step>
+<step>
+  <title></title>
+  <instructions>&lt;p&gt;You will see the image annotation tools appear in the toolbar. Select the tool you want to use and draw on the image.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101574</id>
+    <full_size_id></full_size_id>
+    <filename>media_1238806455893.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/media_1238806455893.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715341&amp;Signature=bP0Bmiq%2BcrqZJFGwVGWkq%2Bwu93g%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>366</width>
+    <height>69</height>
+  </media>
+</step>
+<step>
+  <title>Adjust Annotations</title>
+  <instructions>&lt;p&gt;Open the Inspector palette to adjust the color, thickness and other annotation parameters.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101575</id>
+    <full_size_id></full_size_id>
+    <filename>Adjust_Annotations.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Adjust_Annotations.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715342&amp;Signature=SGO%2FTJ%2F%2F2YDgCObitaIeFbK2geM%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>255</width>
+    <height>111</height>
+  </media>
+</step>
+<step>
+  <title></title>
+  <instructions>&lt;p&gt;Here I have used the rectangle tool.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101576</id>
+    <full_size_id></full_size_id>
+    <filename>media_1198274899988.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/media_1198274899988.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715342&amp;Signature=vqWs2lVuc0wwmYEkxLqUTObAUbU%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>238</width>
+    <height>161</height>
+  </media>
+</step>
+<step>
+  <title>Saving and Other Stuff</title>
+  <instructions>&lt;p&gt;Don't worry about saving.  All of your changes are saved as you make them.  Some additional things you might want to do are:&lt;/p&gt;
+
+
+&lt;p&gt;1. Export the lesson to HTML, PDF, to your own blog, or to ScreenSteps Live.&lt;br /&gt;
+2. Export the lesson as HTML or PDF to the system clipboard.&lt;br /&gt;
+3. Add tags&lt;br /&gt;
+4. Enter a description for the lesson&lt;br /&gt;
+5. Go back to the Lesson Library (that is where you can see all of the lessons you have created)&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>101577</id>
+    <full_size_id></full_size_id>
+    <filename>Saving_and_Other_Stuff.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/2380/Saving_and_Other_Stuff.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715342&amp;Signature=5JzZ6xKi3VsZFnPmrk1mExVqgZA%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>389</width>
+    <height>238</height>
+  </media>
+</step>
+  </steps>
+  <tags type="array">
+    <tag>
+      <name>Getting Started</name>
+    </tag>
+    <tag>
+      <name>ScreenSteps 2</name>
+    </tag>
+    <tag>
+      <name>2.5</name>
+    </tag>
+    <tag>
+      <name>Creating a Lesson</name>
+    </tag>
+  </tags>
+<comments type="array">
+</comments>
+</lesson>

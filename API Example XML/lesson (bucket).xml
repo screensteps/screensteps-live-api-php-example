@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson>
+  <space>
+    <title>Employee Stuff</title>
+    <id>employees</id>
+    <url>http://bmls.screenstepslive.com/spaces/employees</url>
+  </space>
+  <bucket>
+    <id>employee_stuff</id>
+    <title>Employee Stuff</title>
+    <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+  </bucket>
+  <id>5543</id>
+  <title>Adding Messages to Highrise via Email</title>
+  <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/5543-Adding-Messages-to-Highrise-via-Email</url>
+  <description>&lt;p&gt;This is how to get your dropbox email address and start tracking messages in Highrise.&lt;/p&gt;</description>
+  <allow_comments>true</allow_comments>
+  <steps type="array">
+<step>
+  <title>Login to Highrise and select My Info</title>
+  <instructions></instructions>
+  <media>
+    <type>Image</type>
+    <id>68951</id>
+    <full_size_id></full_size_id>
+    <filename>Login_to_Highrise_and_select_My_Info.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/5543/Login_to_Highrise_and_select_My_Info.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715284&amp;Signature=vI%2Fpa5jmyn2y%2BFjy6tinqJDdPdE%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>390</width>
+    <height>169</height>
+  </media>
+</step>
+<step>
+  <title>Select Email dropbox</title>
+  <instructions></instructions>
+  <media>
+    <type>Image</type>
+    <id>68952</id>
+    <full_size_id></full_size_id>
+    <filename>Select_Email_dropbox.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/5543/Select_Email_dropbox.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715284&amp;Signature=%2BpiwlrXGNmmR1Vd0L4q1%2B4z02Uk%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>498</width>
+    <height>152</height>
+  </media>
+</step>
+<step>
+  <title>Get Dropbox address</title>
+  <instructions>&lt;p&gt;NOTE: Don't use the address above. Yours will be different. I would suggest adding this to your address book&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>68953</id>
+    <full_size_id></full_size_id>
+    <filename>Get_Dropbox_address.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/5543/Get_Dropbox_address.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715284&amp;Signature=Cx4odKflKmBLrtN4yjp4IJR2Cns%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>640</width>
+    <height>275</height>
+  </media>
+</step>
+<step>
+  <title>Creating New Messages or Replying</title>
+  <instructions>&lt;p&gt;Now, if you are emailing or replying to someone, add this to the bcc field and it will get imported into Highrise.&lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>68954</id>
+    <full_size_id></full_size_id>
+    <filename>Creating_New_Messages_or_Replying.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/5543/Creating_New_Messages_or_Replying.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715284&amp;Signature=gHprB28gk%2F1DzetBadj7PqHHvH4%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>604</width>
+    <height>229</height>
+  </media>
+</step>
+<step>
+  <title>Forwarding Existing Messages</title>
+  <instructions>&lt;p&gt;If you get a message that you want to add to Highrise just forward it to the dropbox email address. &lt;/p&gt;</instructions>
+  <media>
+    <type>Image</type>
+    <id>68955</id>
+    <full_size_id></full_size_id>
+    <filename>Forwarding_Existing_Messages.png</filename>
+    <full_size_url></full_size_url>
+    <url>http://s3.amazonaws.com/screensteps_live/step_images/bmls/5543/Forwarding_Existing_Messages.png?AWSAccessKeyId=19JMR1FABXNXQR79AGG2&amp;Expires=1267715284&amp;Signature=wREj7kZpzSv5NzYhUWmCxYJRBmM%3D</url>
+    <full_size_width></full_size_width>
+    <full_size_height></full_size_height>
+    <width>638</width>
+    <height>230</height>
+  </media>
+</step>
+  </steps>
+  <tags type="array">
+    <tag>
+      <name>highrise</name>
+    </tag>
+    <tag>
+      <name>email</name>
+    </tag>
+  </tags>
+<comments type="array">
+</comments>
+</lesson>

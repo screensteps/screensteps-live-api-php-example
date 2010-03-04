@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lessons type="array">
+  <lesson>
+    <title>Adding Messages to Highrise via Email</title>
+    <bucket>
+      <id>employee_stuff</id>
+      <title>Employee Stuff</title>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+    </bucket>
+    <space>
+      <id>employees</id>
+      <title>Employee Stuff</title>
+      <url>http://bmls.screenstepslive.com/spaces/employees</url>
+    </space>
+    <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/5543-Adding-Messages-to-Highrise-via-Email</url>
+    <description>&lt;p&gt;This is how to get your dropbox email address and start tracking messages in Highrise.&lt;/p&gt;</description>
+    <id>5543</id>
+    <tags type="array">
+      <tag>
+        <name>highrise</name>
+      </tag>
+      <tag>
+        <name>email</name>
+      </tag>
+    </tags>
+  </lesson>
+  <lesson>
+    <title>Getting Your Email Drop Box in Highrise</title>
+    <bucket>
+      <id>employee_stuff</id>
+      <title>Employee Stuff</title>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+    </bucket>
+    <space>
+      <id>employees</id>
+      <title>Employee Stuff</title>
+      <url>http://bmls.screenstepslive.com/spaces/employees</url>
+    </space>
+    <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/52-Getting-Your-Email-Drop-Box-in-Highrise</url>
+    <description></description>
+    <id>52</id>
+    <tags type="array">
+    </tags>
+  </lesson>
+</lessons>

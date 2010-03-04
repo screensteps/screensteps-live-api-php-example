@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spaces type="array">
+  <space>
+    <id>employees</id>
+    <title>Employee Stuff</title>
+    <protected>true</protected>
+    <url>http://bmls.screenstepslive.com/spaces/employees</url>
+  </space>
+  <space>
+    <id>562</id>
+    <title>Internal Stuff</title>
+    <protected>true</protected>
+    <url>http://bmls.screenstepslive.com/spaces/562</url>
+  </space>
+  <space>
+    <id>medianotes</id>
+    <title>MediaNotes</title>
+    <protected>true</protected>
+    <url>http://bmls.screenstepslive.com/spaces/medianotes</url>
+  </space>
+  <space>
+    <id>screensteps</id>
+    <title>ScreenSteps</title>
+    <protected>false</protected>
+    <url>http://help.screensteps.com</url>
+  </space>
+  <space>
+    <id>screenstepslive</id>
+    <title>ScreenSteps Live</title>
+    <protected>false</protected>
+    <url>http://bmls.screenstepslive.com/spaces/screenstepslive</url>
+  </space>
+</spaces>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<space>
+  <id>720</id>
+  <title>Employee Stuff</title>
+  <permalink>employees</permalink>
+  <message></message>
+  <description></description>
+  <protected>true</protected>
+  <assets type="array">
+    <asset>
+      <title>Employee Stuff</title>
+      <id>employee_stuff</id>
+      <type>Bucket</type>
+      <asset_type>Bucket</asset_type>
+      <hidden>false</hidden>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+    </asset>
+    <asset>
+      <title>Working With Highrise</title>
+      <id>highrise</id>
+      <type>Manual</type>
+      <asset_type>Manual</asset_type>
+      <hidden>false</hidden>
+      <url>http://bmls.screenstepslive.com/spaces/employees/manuals/highrise</url>
+    </asset>
+  </assets>
+</space>

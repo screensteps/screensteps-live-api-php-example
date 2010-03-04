@@ -158,7 +158,6 @@ class SSLiveAPI {
 		
 		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
 								'/manuals/'. $manual_id . '/searches?text=' . urlencode($search_term)), $data);
-
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
 				return simplexml_load_string($data);
@@ -537,7 +536,7 @@ class SSLiveAPI {
 					$array = is_array($this->xml_node_arrays[0]['lessons']) ? $this->xml_node_arrays[0]['lessons'] : Array();
 					break;
 				case 'url':
-					$array = is_array($this->xml_node_arrays[0]['url']) ? $this->xml_node_arrays[0]['url'] : Array();
+					$array = $this->xml_node_arrays[0]['url'];
 					break;
 				case 'tag':
 					$array = is_array($this->xml_node_arrays[0]['tag']) ? $this->xml_node_arrays[0]['tag'] : Array();
@@ -625,7 +624,7 @@ class SSLiveAPI {
 						case 'comments':
 						case 'next_lesson':
 						case 'previous_lesson':
-						case 'tag':
+						case 'tags':
 							$storeAsArrayIndex = FALSE;
 							break;
 					}

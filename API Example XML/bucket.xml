@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bucket>
+  <title>Employee Stuff</title>
+  <id>employee_stuff</id>
+  <hidden>false</hidden>
+  <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff</url>
+  <space>
+    <title>Employee Stuff</title>
+    <id>employees</id>
+    <url>http://bmls.screenstepslive.com/spaces/employees</url>
+  </space>
+  <total_lessons>4</total_lessons>
+  <current_page>1</current_page>
+  <total_pages>1</total_pages>
+  <lessons type="array">
+    <lesson>
+      <title>Improving Audio In Screenflow Using GarageBand</title>
+      <id>8287</id>
+      <description></description>
+      <author_name></author_name>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/8287-Improving-Audio-In-Screenflow-Using-GarageBand</url>
+      <tags>
+      </tags>
+    </lesson>
+    <lesson>
+      <title>Adding Messages to Highrise via Email</title>
+      <id>5543</id>
+      <description>&lt;p&gt;This is how to get your dropbox email address and start tracking messages in Highrise.&lt;/p&gt;</description>
+      <author_name></author_name>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/5543-Adding-Messages-to-Highrise-via-Email</url>
+      <tags>
+        <tag>
+          <name>highrise</name>
+        </tag>
+        <tag>
+          <name>email</name>
+        </tag>
+      </tags>
+    </lesson>
+    <lesson>
+      <title>Setting Up a Git Branch to Track Remotely</title>
+      <id>4768</id>
+      <description></description>
+      <author_name></author_name>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/4768-Setting-Up-a-Git-Branch-to-Track-Remotely</url>
+      <tags>
+        <tag>
+          <name>Git</name>
+        </tag>
+      </tags>
+    </lesson>
+    <lesson>
+      <title>Getting Your Email Drop Box in Highrise</title>
+      <id>52</id>
+      <description></description>
+      <author_name>bmls</author_name>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/lessons/52-Getting-Your-Email-Drop-Box-in-Highrise</url>
+      <tags>
+      </tags>
+    </lesson>
+  </lessons>
+  <tags type="array">
+    <tag>
+      <name>email</name>
+      <count>1</count>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/tags?tag=email</url>
+    </tag>
+    <tag>
+      <name>Git</name>
+      <count>1</count>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/tags?tag=Git</url>
+    </tag>
+    <tag>
+      <name>highrise</name>
+      <count>1</count>
+      <url>http://bmls.screenstepslive.com/spaces/employees/buckets/employee_stuff/tags?tag=highrise</url>
+    </tag>
+  </tags>
+</bucket>
