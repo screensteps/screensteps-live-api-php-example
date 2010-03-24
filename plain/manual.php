@@ -79,7 +79,7 @@
 				print '<h3>Tags in Manual:</h3>';
 				print '<ul>';
 				foreach ($xmlArray['tags']['tag'] as $value) {
-					print '<li>' . $value['name'] . '</li>';
+					print '<li>' . $value['name'] . ' (' . $value['count'] . ')</li>';
 				}
 				print '</ul>';
 			}
