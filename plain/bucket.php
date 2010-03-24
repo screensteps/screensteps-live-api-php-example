@@ -10,11 +10,12 @@
 	
 	if ($isSearching) 
 	{
-		$xmlArray = $sslive->SearchBucket($space_id, $bucket_id, $_GET['search_term']);
+		$xmlArray = $sslive->SearchBucket($space_id, $bucket_id, $_GET['search_term'], array('sort'=>'title'));
 		$spaceTitle = $_GET['space_title'];
 		$bucketTitle = $_GET['bucket_title'];
 	} else {		
-		$xmlArray = $sslive->GetBucket($space_id, $bucket_id);
+		$xmlArray = $sslive->GetBucket($space_id, $bucket_id, array('sort'=>'title'));
+		// $xmlArray = $sslive->GetLessonsWithTagInBucket($space_id, $bucket_id, '2.1', array('sort'=>'title'));
 		$spaceTitle = $xmlArray['space']['title'];
 		$bucketTitle = $xmlArray['title'];
 	}

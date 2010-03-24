@@ -18,6 +18,7 @@
 		$spaceTitle = $xmlArray['space']['title'];
 		$manualTitle = $xmlArray['title'];
 	}
+	//$xmlArray = $sslive->GetLessonsWithTagInManual($space_id, $manual_id, 'Configuration', array('sort'=>'title'));
 	
 	//pr($xmlArray);
 	

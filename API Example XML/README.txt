@@ -1,1 +1,1 @@
-The XML files in this folder contain sample XML returned from the ScreenSteps Live API. This is the XML that the PHP wrapper parses and converts to an array.
+The XML files in this folder contain sample XML returned from the ScreenSteps Live API.

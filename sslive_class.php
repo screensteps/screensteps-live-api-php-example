@@ -1,6 +1,6 @@
 <?php
 
-// Version 1.2.1
+// Version 1.2.2
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
@@ -105,12 +105,12 @@ class SSLiveAPI {
 		}
 	}
 	
-	function SearchSpace($space_id, $search_term) {
+	function SearchSpace($space_id, $search_term, $params) {
 		// Example URL: http://example.screensteps.com/spaces/id/searches?text=SEARCH_TERM
 		$data = '';
 				
 		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/'. $space_id . 
-									'/searches?text=' . urlencode($search_term)), $data);
+									'/searches?text=' . urlencode($search_term), $params), $data);
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
 				return simplexml_load_string($data);
@@ -121,11 +121,11 @@ class SSLiveAPI {
 		}
 	}
 	
-	function GetLessonsWithTagInSpace($space_id, $tag) {
+	function GetLessonsWithTagInSpace($space_id, $tag, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/tags?tag=TAG
 		$data = '';
 		
-		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . '/tags?tag=' . urlencode($tag)), $data);
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . '/tags?tag=' . urlencode($tag), $params), $data);
 		print $data;
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
@@ -152,7 +152,7 @@ class SSLiveAPI {
 		}
 	}
 	
-	function SearchManual($space_id, $manual_id, $search_term) {
+	function SearchManual($space_id, $manual_id, $search_term, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID/searches?text=SEARCH_TERM
 		$data = '';
 		
@@ -168,11 +168,11 @@ class SSLiveAPI {
 		}
 	}
 	
-	function GetBucket($space_id, $bucket_id) {
+	function GetBucket($space_id, $bucket_id, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/buckets/ID
 		$data = '';
 		
-		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . '/buckets/'. $bucket_id), $data);
+		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . '/buckets/'. $bucket_id, $params), $data);
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
 				return simplexml_load_string($data);
@@ -183,12 +183,12 @@ class SSLiveAPI {
 		}
 	}
 	
-	function SearchBucket($space_id, $bucket_id, $search_term) {
+	function SearchBucket($space_id, $bucket_id, $search_term, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/buckets/ID/searches?text=SEARCH_TERM
 		$data = '';
 		
 		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
-								'/buckets/'. $bucket_id . '/searches?text=' . urlencode($search_term)), $data);
+								'/buckets/'. $bucket_id . '/searches?text=' . urlencode($search_term), $params), $data);
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
 				return simplexml_load_string($data);
@@ -199,12 +199,12 @@ class SSLiveAPI {
 		}
 	}
 	
-	function GetLessonsWithTagInBucket($space_id, $bucket_id, $tag) {
+	function GetLessonsWithTagInBucket($space_id, $bucket_id, $tag, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/buckets/ID/tags?tag=TAG
 		$data = '';
 		
 		$this->last_error = $this->requestURLData($this->getCompleteURL('/spaces/' . $space_id . 
-								'/buckets/'. $bucket_id . '/tags?tag=' . urlencode($tag)), $data);
+								'/buckets/'. $bucket_id . '/tags?tag=' . urlencode($tag), $params), $data);
 		if ($this->last_error == '') {
 			if ($this->use_simplexml)
 				return simplexml_load_string($data);
@@ -231,7 +231,7 @@ class SSLiveAPI {
 		}
 	}
 	
-	function GetLessonsWithTagInManual($space_id, $manual_id, $tag) {
+	function GetLessonsWithTagInManual($space_id, $manual_id, $tag, $params) {
 		// Example URL: http://example.screensteps.com/spaces/ID/manuals/ID/tags?tag=TAG
 		$data = '';
 		
@@ -390,8 +390,26 @@ class SSLiveAPI {
 	
 	// PRIVATE
 	
-	function getCompleteURL($request) {
+	function getCompleteURL($request, $params) {	
 		$url = $this->protocol . '://' . $this->domain . $request;
+		
+		if (is_array($params) && count($params) > 0) {			
+			$string = '';
+			
+			foreach ($params as $key=>$value) {
+				$string .= urlencode($key) . '=' . urlencode($value) . '&';
+			}
+			
+			$string = substr($string, 0, -1);
+			
+			if (strstr($url, '?') !== FALSE) {
+				$url .= '&' . $string;
+			} else {
+				$url .= '?' . $string;
+			}
+		}
+		//print $url;
+		
 		return $url;
 	}
 	
