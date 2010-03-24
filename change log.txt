@@ -1,3 +1,6 @@
+Version 1.2.3
+* Certain methods, such as GetBucket, now accept a $param parameter. This is an array of key/values that will be added to the query string. This is useful for specifying sort order (e.g. array('sort'=>'title')).
+
 Version 1.2.1
 * Fixed lesson tag parsing issue when converting ScreenSteps Live API XML to PHP array (introduced in 1.2). Affects GetManualLeson/GetBucketLesson. Format is now:
 
