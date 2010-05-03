@@ -1,6 +1,6 @@
 <?php
 
-// Version 1.2.2
+// Version 1.2.3
 
 // You need to get this from PEAR
 // http://pear.php.net/package/Crypt_HMAC
@@ -390,7 +390,7 @@ class SSLiveAPI {
 	
 	// PRIVATE
 	
-	function getCompleteURL($request, $params) {	
+	function getCompleteURL($request, $params=array()) {	
 		$url = $this->protocol . '://' . $this->domain . $request;
 		
 		if (is_array($params) && count($params) > 0) {			
